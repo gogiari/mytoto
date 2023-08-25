@@ -10,6 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background-color: #3CB371;">푸터당</div>
+    <div style="background-color: #3CB371; text-align: center;">
+        <p style="color: white; font-weight: bold;">푸터당</p>
+    </div>
 </body>
 </html>

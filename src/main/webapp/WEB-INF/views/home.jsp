@@ -9,16 +9,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/common.css" />
+    <style>
+        .wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .main {
+            border: 1px solid black;
+            width: 1240px;
+        }
+    </style>
 </head>
 <body>
     <%@ include file="/WEB-INF/include/header.jsp" %>
-
-    <ul>
-        <li><a href="/user/list">회원 목록</a></li>
-    </ul>
-
+    <div class="wrap">
+        <div class="main">
+            <a href="/user/list">회원 목록</a>
+        </div>
+    </div>
     <%@ include file="/WEB-INF/include/footer.jsp" %>
 </body>
 </html>
