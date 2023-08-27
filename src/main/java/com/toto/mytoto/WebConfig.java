@@ -1,27 +1,18 @@
 package com.toto.mytoto;
 
-import java.util.List;
-import java.util.Set;
-
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-
-import com.toto.mytoto.menu.mapper.MenuMapper;
-import com.toto.mytoto.menu.vo.MenuVo;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfig implements ServletContainerInitializer {
+public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
-    private MenuMapper menuMapper;
+    private HeaderDataInterceptor headerDataInterceptor;
 
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(headerDataInterceptor);
     }
-    
 }

@@ -12,25 +12,31 @@
 </head>
 <body>
     <%@ include file="/WEB-INF/include/header.jsp" %>
-
-    <h2>User List</h2>
-    <table>
-        <tr>
-            <th>아이디</th>
-            <th>이름</th>
-            <th>이메일</th>
-            <th>가입일</th>
-        </tr>
-        <c:forEach var="user" items="${ userList }">
-            
-            <tr>
-                <td>${ user.userid }</td>
-                <td>${ user.username }</td>
-                <td>${ user.email }</td>
-                <td>${ user.indate }</td>
-            </tr>
-        </c:forEach>
-    </table>
+    <div class="wrap">
+        <div class="main">
+            <h2>User List</h2>
+            <table>
+                <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>이메일</th>
+                    <th>가입일</th>
+                </tr>
+                <c:forEach var="user" items="${ userList }">
+    
+                    <tr>
+                        <td>${ user.userid }</td>
+                        <td>${ user.username }</td>
+                        <td>${ user.email }</td>
+                        <td>${ user.indate }</td>
+                    </tr>
+                </c:forEach>
+                <c:forEach var="menu" items="${ menuList}">
+                    <span>${ menu.menu_name}</span>
+                </c:forEach>
+            </table>
+        </div>
+    </div>
 
     <%@ include file="/WEB-INF/include/footer.jsp" %>
 </body>

@@ -1,24 +1,23 @@
-package com.toto.mytoto.menu.controller;
+package com.toto.mytoto;
 
 import java.util.List;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.toto.mytoto.menu.mapper.MenuMapper;
 import com.toto.mytoto.menu.vo.MenuVo;
 
-@Controller
-public class MenuController {
+@SpringBootTest
+public class MenuTest {
     @Autowired
     private MenuMapper menuMapper;
 
-    public ModelAndView list(){
-        ModelAndView mv = new ModelAndView();
+    @Test
+    void testGetMenu(){
         List<MenuVo> menuList = menuMapper.getMenuList();
-
-        return mv;
+        System.out.println("응답하라" + menuList);
     }
     
 }

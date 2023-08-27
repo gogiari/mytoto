@@ -20,6 +20,7 @@ public class UserController {
         ModelAndView mv = new ModelAndView("user/list");
         List<UserVo> userList = userMapper.getUserList();
         mv.addObject("userList", userList);
+
         return mv;
     }
     
