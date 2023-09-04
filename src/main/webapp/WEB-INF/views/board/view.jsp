@@ -12,8 +12,9 @@
             <link rel="stylesheet" href="/css/common.css" />
             <title>Document</title>
             <style>
+
+                /* 유튜브 크기조정해야함 */
                 .boardView img {
-                    /* border-radius: 50px; */
                 }
                 @media screen and (max-width: 1239px) {
                     .boardView img {
@@ -21,19 +22,23 @@
                         height: auto;
                     }
                 }
-                @media screen and (max-width: 1023) {
+                @media screen and (max-width: 1023px) {
                     .boardView img {
                         max-width: 50%;
                         height: auto;
                     }
                 }
-                @media screen and (max-width: 767) {
+                @media screen and (max-width: 767px) {
                     .boardView img {
                         max-width: 50%;
                         height: auto;
                     }
+                    .boardView iframe {
+                        max-width: 320px;
+                        height: 180px;
+                    }
                 }
-            </style>
+                </style>
         </head>
 
         <body>

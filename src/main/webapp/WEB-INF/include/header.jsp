@@ -86,6 +86,9 @@
             margin: 0;
             padding: 10px 0;
         }
+        .sideComuBtn:hover, .anyMenuList {
+            cursor: pointer;
+        }
 
 
         /* 스크린 사이즈에 따라 반응형 */
@@ -110,6 +113,7 @@
             }
         }
         
+        /* 애니메이션 설정 */
         @media screen and (max-width: 767px) {
             .headerCenter {
                 /* grid-template-columns: 1fr; */
@@ -121,7 +125,6 @@
             66% { transform: rotate(-240deg);}
             100% { transform: rotate(-360deg); }
         }
-        /* 애니메이션 설정 */
         .logo > img {
             animation: logoAction 2s infinite;
         }
